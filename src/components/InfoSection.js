@@ -2,7 +2,7 @@ import React from 'react';
 
 const InfoSection = () => {
   return (
-    <div className='grid grid-cols-5 w-full p-10'>
+    <div className='grid lg:grid-cols-5 w-full p-10'>
       <div
         className='w-full max-w-sm bg-cover bg-center col-span-2'
         style={{

@@ -1,8 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-import GlobeIcon from './GlobeIcon';
 
-const ObjectiveItem = ({ obj }) => {
+const ObjectiveItem = ({ obj, Icon }) => {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
@@ -12,7 +11,7 @@ const ObjectiveItem = ({ obj }) => {
       onMouseLeave={() => setIsHovering(false)}
     >
       <div className='w-20 h-20'>
-        <GlobeIcon parentHover={isHovering} />
+        <Icon parentHover={isHovering} />
       </div>
       <div className='flex flex-col gap-3 text-white font-medium leading-snug text-center'>
         {obj.content}

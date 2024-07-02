@@ -26,7 +26,7 @@ const navigation = [
 const Header = () => {
   return (
     <div className='w-full bg-sustainable-green px-5 py-2'>
-      <div className='grid grid-cols-5 divide-x-2 divide-white w-fit mx-auto'>
+      <div className='grid lg:grid-cols-5 divide-x-2 divide-white w-fit mx-auto'>
         {navigation.map((item) => (
           <div
             key={item.link}

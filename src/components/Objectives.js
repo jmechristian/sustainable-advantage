@@ -3,29 +3,30 @@ import React from 'react';
 import { useRive } from '@rive-app/react-canvas';
 import GlobeIcon from './GlobeIcon';
 import ObjectiveItem from './ObjectiveItem';
+import PlantIcon from './PlantIcon';
 
 const objectives = [
   {
     id: 1,
-    icon: 'https://packschool.s3.amazonaws.com/icon1.svg',
+    icon: GlobeIcon,
     content:
       'Recieve a free sustainability audit and technical assistance from the Clemson Research Team.',
   },
   {
     id: 2,
-    icon: 'https://packschool.s3.amazonaws.com/icon2.svg',
+    icon: GlobeIcon,
     content:
       'Determine the sustainable packaging, products, and waste disposal methods most aligned with business operations and goals.',
   },
   {
     id: 3,
-    icon: 'https://packschool.s3.amazonaws.com/icon3.svg',
+    icon: PlantIcon,
     content:
       'Understand the business benefits associated with switching to eco-friendly packaging, products, and waste disposal methods.',
   },
   {
     id: 4,
-    icon: 'https://packschool.s3.amazonaws.com/icon4.svg',
+    icon: PlantIcon,
     content:
       'Generate and enact a plan to replace current products, packaging, and waste disposal methods with more sustainable alternatives.',
   },
@@ -37,9 +38,9 @@ const Objectives = () => {
       <div className='text-3xl font-medium text-center'>
         By The End of This Program, Participants Will:
       </div>
-      <div className='grid grid-cols-4 w-full gap-5'>
+      <div className='grid lg:grid-cols-4 w-full gap-5'>
         {objectives.map((obj) => (
-          <ObjectiveItem obj={obj} key={obj.id} />
+          <ObjectiveItem obj={obj} key={obj.id} Icon={obj.icon} />
         ))}
       </div>
     </div>

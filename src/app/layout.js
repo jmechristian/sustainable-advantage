@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <link rel='stylesheet' href='https://use.typekit.net/jzy7rqb.css' />
       </head>
       <body>
-        <div className='w-full max-w-7xl mx-auto px-4 xl:px-0'>{children}</div>
+        <div className='w-full max-w-7xl mx-auto'>{children}</div>
       </body>
     </html>
   );
