@@ -6,11 +6,11 @@ const ObjectiveItem = ({ obj, Icon }) => {
 
   return (
     <div
-      className='w-full h-full px-4 py-10 rounded bg-sustainable-green text-white flex justify-center items-center flex-col gap-3'
+      className='w-full h-full px-4 py-10 rounded bg-sustainable-green text-white flex justify-center items-center flex-col gap-4'
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <div className='w-20 h-20'>
+      <div className='w-24 h-24'>
         <Icon parentHover={isHovering} />
       </div>
       <div className='flex flex-col gap-3 text-white font-medium leading-snug text-center'>
