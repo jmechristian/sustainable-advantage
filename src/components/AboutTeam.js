@@ -88,6 +88,7 @@ const AboutTeam = () => {
           />
         </div>
       </div>
+      <div className='w-full border-t-8 border-sustainable-green mt-8 lg:mt-20'></div>
     </div>
   );
 };

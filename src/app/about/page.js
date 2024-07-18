@@ -6,8 +6,8 @@ import React from 'react';
 const Page = () => {
   return (
     <div className='w-full flex flex-col gap-10 lg:gap-20 py-10 lg:py-16'>
-      <AboutTeam />
       <Team />
+      <AboutTeam />
       <CTABlock />
     </div>
   );

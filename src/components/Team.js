@@ -42,7 +42,6 @@ const team = [
 const Team = () => {
   return (
     <div className='flex flex-col gap-10 lg:gap-24'>
-      <div className='w-full border-t-8 border-sustainable-green'></div>
       <div className='flex flex-col gap-6'>
         <div className='font-semibold text-3xl lg:text-4xl text-sustainable-green'>
           Meet Our Team
