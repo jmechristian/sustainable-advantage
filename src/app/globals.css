@@ -3,3 +3,14 @@
 @tailwind utilities;
 
 @import url('https://use.typekit.net/jzy7rqb.css');
+
+.mask-with-browser-support {
+  -webkit-mask: linear-gradient(#000, #000), linear-gradient(#000, #000);
+  mask: linear-gradient(#000, #000), linear-gradient(#000, #000);
+  mask-clip: content-box, border-box;
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(#000, #000) content-box,
+    linear-gradient(#000, #000);
+  -webkit-mask-clip: content-box, border-box;
+  -webkit-mask-composite: xor;
+}

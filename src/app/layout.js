@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,8 +17,10 @@ export default function RootLayout({ children }) {
       <head>
         <link rel='stylesheet' href='https://use.typekit.net/jzy7rqb.css' />
       </head>
-      <body>
-        <div className='w-full max-w-7xl mx-auto'>{children}</div>
+      <body className='w-full max-w-7xl mx-auto'>
+        <Header />
+        <div className='mb-12'>{children}</div>
+        <Footer />
       </body>
     </html>
   );

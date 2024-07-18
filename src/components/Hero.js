@@ -5,9 +5,9 @@ import HeroGroup from './HeroGroup';
 const Hero = () => {
   return (
     <div
-      className='w-full py-6 bg-cover bg-right-bottom border-b-8 border-b-sustainable-green'
+      className='w-full py-10 bg-cover bg-right-bottom border-b-8 border-b-sustainable-green mb-10 lg:mb-24'
       style={{
-        backgroundImage: `url('https://packschool.s3.amazonaws.com/bg150.png')`,
+        backgroundImage: `url('https://packschool.s3.amazonaws.com/tree-border2-sm.png')`,
       }}
     >
       <div className='w-full h-[550px] grid lg:grid-cols-2 gap-16 '>

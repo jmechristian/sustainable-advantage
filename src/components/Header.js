@@ -1,13 +1,15 @@
+'use client';
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 const navigation = [
   {
     name: 'Home',
-    link: '#',
+    link: '/',
   },
   {
     name: 'About the Team',
-    link: '#',
+    link: '/about',
   },
   {
     name: 'Services',
@@ -24,13 +26,16 @@ const navigation = [
 ];
 
 const Header = () => {
+  const router = useRouter();
+
   return (
-    <div className='w-full bg-sustainable-green px-5 py-2'>
+    <div className='w-full bg-sustainable-green px-5 py-5'>
       <div className='grid lg:grid-cols-5 divide-x-2 divide-white w-fit mx-auto'>
         {navigation.map((item) => (
           <div
             key={item.link}
-            className='w-full flex justify-center font-semibold text-white px-6 font-headline'
+            className='w-full flex justify-center font-semibold cursor-pointer text-white px-6 font-headline hover:text-yellow-300 transition-all ease-in'
+            onClick={() => router.push(item.link)}
           >
             {item.name}
           </div>

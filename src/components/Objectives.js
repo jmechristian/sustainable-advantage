@@ -34,7 +34,7 @@ const objectives = [
 
 const Objectives = () => {
   return (
-    <div className='flex flex-col gap-5 px-10 py-16 w-full'>
+    <div className='flex flex-col gap-5 w-full'>
       <div className='text-3xl font-medium text-center'>
         By The End of This Program, Participants Will:
       </div>
