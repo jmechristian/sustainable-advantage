@@ -48,7 +48,7 @@ const AboutTeam = () => {
         </div>
       </div>
       <div className='w-full border-t-8 border-sustainable-green  mt-10 lg:mt-24'></div>
-      <div className='grid grid-cols-4 w-full items-center mt-5 lg:mt-10'>
+      <div className='grid grid-cols-2 lg:grid-cols-4 w-full items-center mt-5 lg:mt-10'>
         <div className='w-full px-20'>
           <Image
             src={
