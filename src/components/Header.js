@@ -21,7 +21,7 @@ const navigation = [
   },
   {
     name: 'Contact Us',
-    link: '#',
+    link: '/contact',
   },
 ];
 

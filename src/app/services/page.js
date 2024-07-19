@@ -22,7 +22,7 @@ const services = [
   },
 ];
 
-const page = () => {
+const Page = () => {
   return (
     <div className='w-full flex flex-col gap-10 lg:gap-20 py-10 lg:py-16'>
       <div className='flex flex-col gap-6'>
@@ -60,4 +60,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
