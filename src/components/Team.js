@@ -4,13 +4,13 @@ const team = [
   {
     name: 'Dr. Andrew Hurley',
     title: 'Associate Professor at Clemson University',
-    pic: 'pic',
+    pic: 'https://packschool.s3.amazonaws.com/DrHurley.png',
     background: 'bg-[#d5673b]',
   },
   {
     name: 'Dr. James Sternberg',
     title: 'Associate Professor at Clemson University',
-    pic: 'pic',
+    pic: 'https://packschool.s3.amazonaws.com/DrSternberg.png',
     background: 'bg-[#d5673b]',
   },
   {
@@ -22,13 +22,13 @@ const team = [
   {
     name: 'Melissa Williams',
     title: 'Program Coordinator at Mill Village Ministries',
-    pic: 'pic',
+    pic: 'https://packschool.s3.amazonaws.com/Melissa.png',
     background: 'bg-[#5799a4]',
   },
   {
     name: 'Hunter Dixon',
     title: 'Graduate Assistant at Clemson University',
-    pic: 'pic',
+    pic: 'https://packschool.s3.amazonaws.com/Hunter.png',
     background: 'bg-[#d5673b]',
   },
   {
@@ -52,7 +52,10 @@ const Team = () => {
               className={`p-6 flex flex-col gap-5 ${t.background}`}
               key={t.name}
             >
-              <div className='aspect-square ring-4 ring-white rounded-full w-full bg-black' />
+              <div
+                className='aspect-square ring-4 ring-white rounded-full w-full bg-black bg-cover bg-center'
+                style={{ backgroundImage: `url(${t.pic})` }}
+              />
               <div className='flex flex-col gap-1.5 items-center text-center'>
                 <div className='text-white font-semibold text-lg leading-tight px-5'>
                   {t.name}
