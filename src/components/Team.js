@@ -16,7 +16,7 @@ const team = [
   {
     name: 'Sheryl Guarniero',
     title: 'Executive Director of Sustain Cities',
-    pic: 'pic',
+    pic: 'https://packschool.s3.amazonaws.com/Sheryl.png',
     background: 'bg-[#5799a4]',
   },
   {
@@ -34,7 +34,7 @@ const team = [
   {
     name: 'Margaret Milani',
     title: 'Graduate Assistant at Clemson University',
-    pic: 'pic',
+    pic: 'https://packschool.s3.amazonaws.com/Margaret.png',
     background: 'bg-[#d5673b]',
   },
 ];
