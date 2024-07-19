@@ -35,8 +35,8 @@ const page = () => {
               className='w-full rounded-xl bg-sustainable-green p-16'
               key={se.pic}
             >
-              <div className='w-full grid grid-cols-6 gap-10 items-center'>
-                <div className='col-span-4 flex flex-col gap-3'>
+              <div className='w-full grid lg:grid-cols-6 gap-10 items-center'>
+                <div className='lg:col-span-4 flex flex-col gap-3'>
                   <div className='text-white font-medium text-4xl'>
                     {se.title}
                   </div>
@@ -44,7 +44,7 @@ const page = () => {
                     {se.content}
                   </div>
                 </div>
-                <div className='w-full col-span-2'>
+                <div className='w-full h-full lg:col-span-2'>
                   <div
                     className='w-full h-full min-h-[300px] bg-contain bg-center bg-no-repeat'
                     style={{ backgroundImage: `url(${se.pic})` }}
