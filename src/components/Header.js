@@ -17,7 +17,7 @@ const navigation = [
   },
   {
     name: 'Webinars',
-    link: '#',
+    link: '/webinars',
   },
   {
     name: 'Contact Us',
