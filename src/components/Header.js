@@ -13,7 +13,7 @@ const navigation = [
   },
   {
     name: 'Services',
-    link: '#',
+    link: '/services',
   },
   {
     name: 'Webinars',
