@@ -1,4 +1,7 @@
+'use client';
+import CTABlock from '@/components/CTABlock';
 import React from 'react';
+import { MdCloudDownload, MdOndemandVideo } from 'react-icons/md';
 
 const webinars = [
   {
@@ -48,7 +51,7 @@ const Page = () => {
           <div className='grid grid-cols-2 gap-5 content-center mt-2'>
             {webinars[0].objectives.map((ob) => (
               <div
-                className='text-sm p-2.5 bg-sustainable-green/30 leading-tight'
+                className='text-sm p-2.5 bg-sustainable-green/30 leading-tight font-body'
                 key={ob}
               >
                 {ob}
@@ -59,16 +62,91 @@ const Page = () => {
       </div>
       <div className='w-full border-t-8 border-sustainable-green'></div>
       <div className='grid grid-cols-3 gap-10'>
-        <div className='bg-sustainable-green p-10 flex flex-col gap-5'>
-          <div className='font-medium text-3xl text-white'>Step One</div>
-          <div className='text-white font-body font-medium'>
-            Download the Module 1 worksheet below. This worksheet will guide you
-            through Webinar 1 and explain how to complete Appendix 1 & 2.
+        <div className='bg-sustainable-green p-10 flex flex-col gap-3 lg:justify-between'>
+          <div className='flex flex-col gap-3'>
+            <div className='font-medium text-3xl text-white'>Step One</div>
+            <div className='text-white font-body font-medium'>
+              Download the Module 1 worksheet below. This worksheet will guide
+              you through Webinar 1 and explain how to complete Appendix 1 & 2.
+            </div>
+          </div>
+          <div
+            className='bg-white flex items-center gap-2 w-fit py-2 px-3 cursor-pointer hover:bg-neutral-200 transition-colors ease-in'
+            onClick={() =>
+              window.open(
+                'https://packschool.s3.amazonaws.com/Module-1-Worksheet.pdf',
+                '_blank'
+              )
+            }
+          >
+            <div>
+              <MdCloudDownload size={24} color='black' />
+            </div>
+            <div>Download Worksheet</div>
           </div>
         </div>
-        <div>2</div>
-        <div>3</div>
+        <div className='bg-sustainable-green p-9 flex flex-col gap-5 justify-between'>
+          <div className='flex flex-col gap-3'>
+            <div className='font-medium text-3xl text-white'>Step Two</div>
+            <div className='text-white font-body font-medium'>
+              Watch the Webinar 1 video via YouTube. This webinar will encourage
+              you to begin evaluating the products, packages, materials &amp;
+              waste disposal methods your business currently uses.
+            </div>
+          </div>
+          <div className='bg-white flex items-center gap-2 w-fit py-2 px-3 cursor-pointer hover:bg-neutral-200 transition-colors ease-in'>
+            <div>
+              <MdOndemandVideo size={24} color='black' />
+            </div>
+            <div>Watch Webinar 1</div>
+          </div>
+        </div>
+        <div className='bg-sustainable-green p-10 flex flex-col gap-5 justify-between'>
+          <div className='flex flex-col gap-3'>
+            <div className='font-medium text-3xl text-white'>Step Three</div>
+            <div className='text-white font-body font-medium'>
+              Download Appendix 1 & 2, then begin filling them out using the
+              directions provided in the Module 1 worksheet.
+            </div>
+            <div className='text-white font-body font-bold'>
+              Once completed, email the digital copies to:
+              thesustainableadvantage@gmail.com
+            </div>
+          </div>
+          <div className='w-full grid lg:grid-cols-2 gap-3'>
+            <div
+              className='bg-white flex items-center gap-2 w-fit py-2 px-3 cursor-pointer hover:bg-neutral-200 transition-colors ease-in'
+              onClick={() =>
+                window.open(
+                  'https://packschool.s3.amazonaws.com/Appendix-1.pdf',
+                  '_blank'
+                )
+              }
+            >
+              <div>
+                <MdCloudDownload size={24} color='black' />
+              </div>
+              <div>Appendix 1</div>
+            </div>
+            <div
+              className='bg-white flex items-center gap-2 w-fit py-2 px-3 cursor-pointer hover:bg-neutral-200 transition-colors ease-in'
+              onClick={() =>
+                window.open(
+                  'https://packschool.s3.amazonaws.com/Appendix-2.pdf',
+                  '_blank'
+                )
+              }
+            >
+              <div>
+                <MdCloudDownload size={24} color='black' />
+              </div>
+              <div>Appendix 2</div>
+            </div>
+          </div>
+        </div>
       </div>
+      <div className='w-full border-t-8 border-sustainable-green'></div>
+      <CTABlock />
     </div>
   );
 };
