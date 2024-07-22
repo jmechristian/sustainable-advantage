@@ -1,15 +1,13 @@
 import React from 'react';
+import VideoPlayer from './VideoPlayer';
 
 const InfoSection = () => {
   return (
-    <div className='grid lg:grid-cols-5 w-full'>
-      <div
-        className='w-full max-w-sm bg-cover bg-center col-span-2'
-        style={{
-          backgroundImage: `url('https://packschool.s3.amazonaws.com/sustainable-advantage-cup-sm.png')`,
-        }}
-      ></div>
-      <div className='w-full flex flex-col gap-10 col-span-3 py-10 px-5'>
+    <div className='grid lg:grid-cols-2 w-full gap-16 items-center'>
+      <div className='w-full col-span-1'>
+        <VideoPlayer />
+      </div>
+      <div className='w-full flex flex-col gap-10 col-span-1 py-10 px-5'>
         <p className='text-xl text-sustainable-green font-body leading-relaxed'>
           This program is made available through an EPA cooperative agreement
           with researchers at Clemson University to help prevent plastic waste
