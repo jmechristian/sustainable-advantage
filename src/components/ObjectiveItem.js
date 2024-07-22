@@ -6,7 +6,7 @@ const ObjectiveItem = ({ obj, Icon }) => {
 
   return (
     <div
-      className='w-full h-full px-4 py-10 rounded bg-sustainable-green text-white flex justify-center items-center flex-col gap-4'
+      className='w-full h-full px-6 py-10 rounded bg-sustainable-green text-white flex items-center flex-col gap-4'
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >

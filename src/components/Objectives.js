@@ -2,13 +2,15 @@
 import React from 'react';
 import { useRive } from '@rive-app/react-canvas';
 import GlobeIcon from './GlobeIcon';
+import ChatIcon from './ChatIcon';
 import ObjectiveItem from './ObjectiveItem';
 import PlantIcon from './PlantIcon';
+import DocIcon from './DocIcon';
 
 const objectives = [
   {
     id: 1,
-    icon: GlobeIcon,
+    icon: ChatIcon,
     content:
       'Recieve a free sustainability audit and technical assistance from the Clemson Research Team.',
   },
@@ -26,7 +28,7 @@ const objectives = [
   },
   {
     id: 4,
-    icon: PlantIcon,
+    icon: DocIcon,
     content:
       'Generate and enact a plan to replace current products, packaging, and waste disposal methods with more sustainable alternatives.',
   },
