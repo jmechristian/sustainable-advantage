@@ -7,6 +7,12 @@ const VideoPlayer = () => {
     <div className='w-full'>
       <ReactPlayer
         url={'https://www.youtube.com/embed/h5IOkDFCxH4?si=Y2eGHQU7_EVgXllo'}
+        light={
+          <img
+            src='https://packschool.s3.amazonaws.com/video-cover-sm.png'
+            alt='Thumbnail'
+          />
+        }
       />
     </div>
   );

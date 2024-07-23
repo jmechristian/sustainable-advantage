@@ -1,4 +1,5 @@
 import CTABlock from '@/components/CTABlock';
+import MotionWrapper from '@/components/MotionWrapper';
 import React from 'react';
 import { MdForwardToInbox } from 'react-icons/md';
 
@@ -28,48 +29,50 @@ const contacts = [
 
 const Page = () => {
   return (
-    <div className='w-full flex flex-col gap-10 lg:gap-20 py-10 lg:py-16'>
-      <div className='flex flex-col gap-6'>
-        <div className='font-semibold text-3xl lg:text-4xl text-sustainable-green'>
-          Contact Us
-        </div>
-        <div className='grid grid-cols-3 gap-5'>
-          {contacts.map((t) => (
-            <div
-              className={`p-6 flex flex-col gap-5 ${t.background}`}
-              key={t.name}
-            >
+    <MotionWrapper>
+      <div className='w-full flex flex-col gap-10 lg:gap-20 py-10 lg:py-16'>
+        <div className='flex flex-col gap-6'>
+          <div className='font-semibold text-3xl lg:text-4xl text-sustainable-green'>
+            Contact Us
+          </div>
+          <div className='grid grid-cols-3 gap-5'>
+            {contacts.map((t) => (
               <div
-                className='aspect-square max-w-[200px] mx-auto ring-4 ring-white rounded-full w-full bg-black bg-cover bg-center'
-                style={{ backgroundImage: `url(${t.pic})` }}
-              />
-              <div className='flex flex-col gap-1.5 items-center text-center'>
-                <div className='text-white font-semibold text-lg leading-tight px-5'>
-                  {t.name}
-                </div>
-                <div className='text-white font-body leading-tight'>
-                  {t.title}
-                </div>
-                <a
-                  href={`mailto:${t.email}`}
-                  className='flex items-center gap-2 mt-4 cursor-pointer bg-white hover:bg-neutral-300 transition-colors ease-in text-black p-2'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <div>
-                    <MdForwardToInbox size={24} color='black' />
+                className={`p-6 flex flex-col gap-5 ${t.background}`}
+                key={t.name}
+              >
+                <div
+                  className='aspect-square max-w-[200px] mx-auto ring-4 ring-white rounded-full w-full bg-black bg-cover bg-center'
+                  style={{ backgroundImage: `url(${t.pic})` }}
+                />
+                <div className='flex flex-col gap-1.5 items-center text-center'>
+                  <div className='text-white font-semibold text-lg leading-tight px-5'>
+                    {t.name}
                   </div>
-                  <div className='text-black font-body leading-tight'>
-                    {t.email}
+                  <div className='text-white font-body leading-tight'>
+                    {t.title}
                   </div>
-                </a>
+                  <a
+                    href={`mailto:${t.email}`}
+                    className='flex items-center gap-2 mt-4 cursor-pointer bg-white hover:bg-neutral-300 transition-colors ease-in text-black p-2'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <div>
+                      <MdForwardToInbox size={24} color='black' />
+                    </div>
+                    <div className='text-black font-body leading-tight'>
+                      {t.email}
+                    </div>
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+        <CTABlock />
       </div>
-      <CTABlock />
-    </div>
+    </MotionWrapper>
   );
 };
 

@@ -1,4 +1,5 @@
 import CTABlock from '@/components/CTABlock';
+import MotionWrapper from '@/components/MotionWrapper';
 import React from 'react';
 
 const services = [
@@ -24,79 +25,81 @@ const services = [
 
 const Page = () => {
   return (
-    <div className='w-full flex flex-col gap-10 lg:gap-20 py-10 lg:py-16'>
-      <div className='flex flex-col gap-6'>
-        <div className='font-semibold text-3xl lg:text-4xl text-sustainable-green'>
-          Our Services
+    <MotionWrapper>
+      <div className='w-full flex flex-col gap-10 lg:gap-20 py-10 lg:py-16'>
+        <div className='flex flex-col gap-6'>
+          <div className='font-semibold text-3xl lg:text-4xl text-sustainable-green'>
+            Our Services
+          </div>
+          <div className='flex flex-col gap-4'>
+            <div
+              className='w-full rounded-xl bg-sustainable-green p-16'
+              key={services[0].pic}
+            >
+              <div className='w-full grid lg:grid-cols-6 gap-10 items-center'>
+                <div className='lg:col-span-4 flex flex-col gap-3'>
+                  <div className='text-white font-medium text-4xl'>
+                    {services[0].title}
+                  </div>
+                  <div className='text-white font-medium text-lg font-body lg:pr-10'>
+                    {services[0].content}
+                  </div>
+                </div>
+                <div className='w-full h-full lg:col-span-2'>
+                  <div
+                    className='w-full h-full min-h-[300px] bg-contain bg-center bg-no-repeat'
+                    style={{ backgroundImage: `url(${services[0].pic})` }}
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className='w-full rounded-xl bg-sustainable-green p-16'
+              key={services[1].pic}
+            >
+              <div className='w-full grid lg:grid-cols-6 gap-10 items-center'>
+                <div className='w-full h-full lg:col-span-2'>
+                  <div
+                    className='w-full h-full min-h-[300px] bg-contain bg-center bg-no-repeat'
+                    style={{ backgroundImage: `url(${services[1].pic})` }}
+                  />
+                </div>
+                <div className='lg:col-span-4 flex flex-col gap-3'>
+                  <div className='text-white font-medium text-4xl'>
+                    {services[1].title}
+                  </div>
+                  <div className='text-white font-medium text-lg font-body lg:pr-10'>
+                    {services[1].content}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className='w-full rounded-xl bg-sustainable-green p-16'
+              key={services[2].pic}
+            >
+              <div className='w-full grid lg:grid-cols-6 gap-10 items-center'>
+                <div className='lg:col-span-4 flex flex-col gap-3'>
+                  <div className='text-white font-medium text-4xl'>
+                    {services[2].title}
+                  </div>
+                  <div className='text-white font-medium text-lg font-body lg:pr-10'>
+                    {services[2].content}
+                  </div>
+                </div>
+                <div className='w-full h-full lg:col-span-2'>
+                  <div
+                    className='w-full h-full min-h-[300px] bg-contain bg-center bg-no-repeat'
+                    style={{ backgroundImage: `url(${services[2].pic})` }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className='flex flex-col gap-4'>
-          <div
-            className='w-full rounded-xl bg-sustainable-green p-16'
-            key={services[0].pic}
-          >
-            <div className='w-full grid lg:grid-cols-6 gap-10 items-center'>
-              <div className='lg:col-span-4 flex flex-col gap-3'>
-                <div className='text-white font-medium text-4xl'>
-                  {services[0].title}
-                </div>
-                <div className='text-white font-medium text-lg font-body lg:pr-10'>
-                  {services[0].content}
-                </div>
-              </div>
-              <div className='w-full h-full lg:col-span-2'>
-                <div
-                  className='w-full h-full min-h-[300px] bg-contain bg-center bg-no-repeat'
-                  style={{ backgroundImage: `url(${services[0].pic})` }}
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            className='w-full rounded-xl bg-sustainable-green p-16'
-            key={services[1].pic}
-          >
-            <div className='w-full grid lg:grid-cols-6 gap-10 items-center'>
-              <div className='w-full h-full lg:col-span-2'>
-                <div
-                  className='w-full h-full min-h-[300px] bg-contain bg-center bg-no-repeat'
-                  style={{ backgroundImage: `url(${services[1].pic})` }}
-                />
-              </div>
-              <div className='lg:col-span-4 flex flex-col gap-3'>
-                <div className='text-white font-medium text-4xl'>
-                  {services[1].title}
-                </div>
-                <div className='text-white font-medium text-lg font-body lg:pr-10'>
-                  {services[1].content}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className='w-full rounded-xl bg-sustainable-green p-16'
-            key={services[2].pic}
-          >
-            <div className='w-full grid lg:grid-cols-6 gap-10 items-center'>
-              <div className='lg:col-span-4 flex flex-col gap-3'>
-                <div className='text-white font-medium text-4xl'>
-                  {services[2].title}
-                </div>
-                <div className='text-white font-medium text-lg font-body lg:pr-10'>
-                  {services[2].content}
-                </div>
-              </div>
-              <div className='w-full h-full lg:col-span-2'>
-                <div
-                  className='w-full h-full min-h-[300px] bg-contain bg-center bg-no-repeat'
-                  style={{ backgroundImage: `url(${services[2].pic})` }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        <CTABlock />
       </div>
-      <CTABlock />
-    </div>
+    </MotionWrapper>
   );
 };
 
