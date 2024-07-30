@@ -3,11 +3,11 @@ import VideoPlayer from './VideoPlayer';
 
 const InfoSection = () => {
   return (
-    <div className='grid lg:grid-cols-2 w-full gap-16 items-center'>
-      <div className='w-full col-span-1'>
+    <div className='grid lg:grid-cols-2 w-full gap-16 items-center overflow-hidden'>
+      <div className='col-span-1'>
         <VideoPlayer />
       </div>
-      <div className='w-full flex flex-col gap-10 col-span-1 py-10 px-5'>
+      <div className='w-full flex flex-col gap-10 col-span-1 lg:py-10 px-5'>
         <p className='text-xl text-sustainable-green font-body leading-relaxed'>
           This program is made available through an EPA cooperative agreement
           with researchers at Clemson University to help prevent plastic waste

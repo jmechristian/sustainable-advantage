@@ -40,7 +40,7 @@ const Objectives = () => {
       <div className='text-3xl font-medium text-center'>
         By The End of This Program, Participants Will:
       </div>
-      <div className='grid lg:grid-cols-4 w-full gap-5'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-4 w-full gap-5 px-6 lg:px-0'>
         {objectives.map((obj) => (
           <ObjectiveItem obj={obj} key={obj.id} Icon={obj.icon} />
         ))}

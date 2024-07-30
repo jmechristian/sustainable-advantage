@@ -26,14 +26,14 @@ const services = [
 const Page = () => {
   return (
     <MotionWrapper>
-      <div className='w-full flex flex-col gap-10 lg:gap-20 py-10 lg:py-16'>
+      <div className='w-full flex flex-col gap-10 lg:gap-20 py-10 lg:py-16 px-6 lg:px-0'>
         <div className='flex flex-col gap-6'>
           <div className='font-semibold text-3xl lg:text-4xl text-sustainable-green'>
             Our Services
           </div>
           <div className='flex flex-col gap-4'>
             <div
-              className='w-full rounded-xl bg-sustainable-green p-16'
+              className='w-full rounded-xl bg-sustainable-green p-8 lg:p-16'
               key={services[0].pic}
             >
               <div className='w-full grid lg:grid-cols-6 gap-10 items-center'>
@@ -54,7 +54,7 @@ const Page = () => {
               </div>
             </div>
             <div
-              className='w-full rounded-xl bg-sustainable-green p-16'
+              className='w-full rounded-xl bg-sustainable-green p-8 lg:p-16'
               key={services[1].pic}
             >
               <div className='w-full grid lg:grid-cols-6 gap-10 items-center'>
@@ -75,7 +75,7 @@ const Page = () => {
               </div>
             </div>
             <div
-              className='w-full rounded-xl bg-sustainable-green p-16'
+              className='w-full rounded-xl bg-sustainable-green p-8 lg:p-16'
               key={services[2].pic}
             >
               <div className='w-full grid lg:grid-cols-6 gap-10 items-center'>

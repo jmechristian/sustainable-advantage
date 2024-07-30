@@ -37,33 +37,37 @@ const webinars = [
 const Page = () => {
   return (
     <MotionWrapper>
-      <div className='w-full flex flex-col gap-10 lg:gap-20 py-10 lg:py-16'>
-        <div className='grid lg:grid-cols-5 w-full items-center'>
-          <div className='aspect-video lg:col-span-2'>
+      <div className='w-full flex flex-col gap-10 lg:gap-16 py-10 lg:py-16 px-6 lg:px-0'>
+        <div className='grid lg:grid-cols-2 w-full items-center gap-10 lg:gap-20'>
+          <div className='aspect-video lg:col-span-1'>
             <div
               className='w-full h-full bg-black bg-contain bg-no-repeat bg-center'
               style={{ backgroundImage: `url(${webinars[0].screenshot})` }}
             ></div>
           </div>
-          <div className='w-full flex flex-col pl-5 gap-1.5 lg:col-span-3'>
+          <div className='w-full flex flex-col pl-5 gap-1.5 lg:col-span-1'>
             <div className='font-medium text-4xl text-sustainable-green'>
               {webinars[0].title}
             </div>
-            <div>{webinars[0].content}</div>
-            <div className='grid grid-cols-2 gap-5 content-center mt-2'>
-              {webinars[0].objectives.map((ob) => (
-                <div
-                  className='text-sm p-2.5 bg-sustainable-green/30 leading-tight font-body'
-                  key={ob}
-                >
-                  {ob}
-                </div>
-              ))}
-            </div>
+            <div className='text-xl'>{webinars[0].content}</div>
           </div>
         </div>
         <div className='w-full border-t-8 border-sustainable-green'></div>
-        <div className='grid grid-cols-3 gap-10'>
+        <div className='grid lg:grid-cols-2 gap-10'>
+          <div className='lg:col-span-2 text-2xl font-medium'>
+            Course 1 Objectives
+          </div>
+          {webinars[0].objectives.map((ob) => (
+            <div
+              className='p-5 bg-sustainable-green/30 leading-tight text-lg font-body'
+              key={ob}
+            >
+              {ob}
+            </div>
+          ))}
+        </div>
+        <div className='w-full border-t-8 border-sustainable-green'></div>
+        <div className='grid lg:grid-cols-3 gap-10'>
           <div className='bg-sustainable-green p-10 flex flex-col gap-3 lg:justify-between'>
             <div className='flex flex-col gap-3'>
               <div className='font-medium text-3xl text-white'>Step One</div>

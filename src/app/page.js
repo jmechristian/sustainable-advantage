@@ -10,7 +10,7 @@ export default function Home() {
       <main className='items-center'>
         <div className='w-full h-full flex flex-col'>
           <Hero />
-          <div className='flex flex-col gap-10 lg:gap-24'>
+          <div className='flex flex-col gap-16 lg:gap-24'>
             <InfoSection />
             <Objectives />
             <CTABlock />

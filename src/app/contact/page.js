@@ -30,12 +30,12 @@ const contacts = [
 const Page = () => {
   return (
     <MotionWrapper>
-      <div className='w-full flex flex-col gap-10 lg:gap-20 py-10 lg:py-16'>
+      <div className='w-full flex flex-col gap-10 lg:gap-20 py-10 lg:py-16 px-6 lg:px-0'>
         <div className='flex flex-col gap-6'>
           <div className='font-semibold text-3xl lg:text-4xl text-sustainable-green'>
             Contact Us
           </div>
-          <div className='grid grid-cols-3 gap-5'>
+          <div className='grid lg:grid-cols-3 gap-5'>
             {contacts.map((t) => (
               <div
                 className={`p-6 flex flex-col gap-5 ${t.background}`}

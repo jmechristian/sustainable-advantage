@@ -43,10 +43,10 @@ const Team = () => {
   return (
     <div className='flex flex-col gap-10 lg:gap-24'>
       <div className='flex flex-col gap-6'>
-        <div className='font-semibold text-3xl lg:text-4xl text-sustainable-green'>
+        <div className='font-semibold text-3xl lg:text-4xl text-sustainable-green px-6 lg:px-0'>
           Meet Our Team
         </div>
-        <div className='grid grid-cols-3 lg:grid-cols-6 gap-5'>
+        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5'>
           {team.map((t) => (
             <div
               className={`p-6 flex flex-col gap-5 ${t.background}`}
