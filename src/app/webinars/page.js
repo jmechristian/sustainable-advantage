@@ -10,7 +10,7 @@ const webinars = [
     title: 'Webinar 1',
     content:
       'Join Dr. Sternberg, an assistant professor in sustainable packaging at Clemson University, as we begin to explore what it means to be sustainable and what The Sustainable Advantage program can do for your business.',
-    screenshot: 'https://packschool.s3.amazonaws.com/screengrab-sa.png',
+    screenshot: 'https://packschool.s3.amazonaws.com/web1-cover.png',
     live: true,
   },
   {

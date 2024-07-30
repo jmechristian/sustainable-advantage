@@ -1,6 +1,7 @@
 'use client';
 import CTABlock from '@/components/CTABlock';
 import MotionWrapper from '@/components/MotionWrapper';
+import WebinarPlayer from '@/components/WebinarPlayer';
 import React from 'react';
 import { MdCloudDownload, MdOndemandVideo } from 'react-icons/md';
 
@@ -40,10 +41,9 @@ const Page = () => {
       <div className='w-full flex flex-col gap-10 lg:gap-16 py-10 lg:py-16 px-6 lg:px-0'>
         <div className='grid lg:grid-cols-2 w-full items-center gap-10 lg:gap-20'>
           <div className='aspect-video lg:col-span-1'>
-            <div
-              className='w-full h-full bg-black bg-contain bg-no-repeat bg-center'
-              style={{ backgroundImage: `url(${webinars[0].screenshot})` }}
-            ></div>
+            <WebinarPlayer
+              url={'https://youtu.be/NmnCuzrC_Eg?si=cvCJEffe2IL6i-tJ'}
+            />
           </div>
           <div className='w-full flex flex-col pl-5 gap-1.5 lg:col-span-1'>
             <div className='font-medium text-4xl text-sustainable-green'>
@@ -102,7 +102,15 @@ const Page = () => {
                 uses.
               </div>
             </div>
-            <div className='bg-white flex items-center gap-2 w-fit py-2 px-3 cursor-pointer hover:bg-neutral-200 transition-colors ease-in'>
+            <div
+              className='bg-white flex items-center gap-2 w-fit py-2 px-3 cursor-pointer hover:bg-neutral-200 transition-colors ease-in'
+              onClick={() =>
+                window.open(
+                  'https://youtu.be/NmnCuzrC_Eg?si=cvCJEffe2IL6i-tJ',
+                  '_blank'
+                )
+              }
+            >
               <div>
                 <MdOndemandVideo size={24} color='black' />
               </div>
