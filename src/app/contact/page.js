@@ -5,6 +5,13 @@ import { MdForwardToInbox } from 'react-icons/md';
 
 const contacts = [
   {
+    name: 'Contact the Team',
+    title: 'For all general questions and inquiries',
+    pic: 'https://packschool.s3.amazonaws.com/logo.png',
+    background: 'bg-sustainable-green',
+    email: 'thesustainableadvantage@gmail.com',
+  },
+  {
     name: 'Dr. James Sternberg',
     title: 'Associate Professor at Clemson University',
     pic: 'https://packschool.s3.amazonaws.com/DrSternberg.png',
@@ -35,7 +42,7 @@ const Page = () => {
           <div className='font-semibold text-3xl lg:text-4xl text-sustainable-green'>
             Contact Us
           </div>
-          <div className='grid lg:grid-cols-3 gap-5'>
+          <div className='grid lg:grid-cols-4 gap-5'>
             {contacts.map((t) => (
               <div
                 className={`p-6 flex flex-col gap-5 ${t.background}`}
@@ -61,7 +68,7 @@ const Page = () => {
                     <div>
                       <MdForwardToInbox size={24} color='black' />
                     </div>
-                    <div className='text-black font-body leading-tight'>
+                    <div className='text-black text-xs font-body leading-tight'>
                       {t.email}
                     </div>
                   </a>
