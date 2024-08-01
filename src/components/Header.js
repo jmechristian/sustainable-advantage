@@ -3,6 +3,7 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { MobileHeader } from './MobileHeader';
 import { MdMarkChatUnread } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 const navigation = [
   {
@@ -35,7 +36,10 @@ const Header = () => {
       <div className='lg:hidden block'>
         <MobileHeader navigation={navigation} />
       </div>
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: '-100%' }}
+        animate={{ opacity: 1, y: '0%' }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
         className='hidden w-full lg:flex justify-center items-center gap-1 bg-amber-200 hover:bg-amber-300 transition-colors ease-in py-3 cursor-pointer'
         onClick={() =>
           window.open('https://forms.gle/orjUbg6TiD1DqFHJ6', '_blank')
@@ -48,8 +52,13 @@ const Header = () => {
           Click here to schedule a free consultation with the Clemson Research
           Team
         </div>
-      </div>
-      <div className='w-full bg-sustainable-green px-5 py-6 hidden lg:block'>
+      </motion.div>
+      <motion.div
+        className='w-full bg-sustainable-green px-5 py-6 hidden lg:block'
+        initial={{ opacity: 0, y: '-100%' }}
+        animate={{ opacity: 1, y: '0%' }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+      >
         <div className='grid lg:grid-cols-5 divide-x-2 divide-white w-fit mx-auto'>
           {navigation.map((item) => (
             <div
@@ -61,7 +70,7 @@ const Header = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
