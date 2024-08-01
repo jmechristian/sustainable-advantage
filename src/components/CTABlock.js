@@ -12,10 +12,16 @@ const CTABlock = () => {
               Ready To Get Started?
             </div>
             <div className='font-body text-medium text-lg lg:text-xl'>
-              Scan or click the QR code or follow the link below to fill out the
-              interest form and a team member will reach out to your business
-              with more information on how to get started or answer any
-              questions you may have.
+              Scan or click the QR code or{' '}
+              <a
+                className='font-semibold underline'
+                href='https://forms.gle/orjUbg6TiD1DqFHJ6'
+              >
+                click here
+              </a>{' '}
+              to fill out the interest form and a team member will reach out to
+              your business with more information on how to get started or
+              answer any questions you may have.
             </div>
           </div>
         </div>
@@ -23,10 +29,7 @@ const CTABlock = () => {
           <div
             className='cursor-pointer w-full max-w-xs mx-auto bg-sustainable-green flex justify-center items-center p-10 mb-10 lg:mb-0'
             onClick={() =>
-              window.open(
-                'https://docs.google.com/forms/d/e/1FAIpQLSfrH0nMFWqpKVlq9DDulpKsnD4q5DhrHBejEe73jd0CQvOKwg/viewform',
-                '_blank'
-              )
+              window.open('https://forms.gle/orjUbg6TiD1DqFHJ6', '_blank')
             }
           >
             <Image

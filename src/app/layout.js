@@ -17,8 +17,10 @@ export default function RootLayout({ children }) {
       <head>
         <link rel='stylesheet' href='https://use.typekit.net/jzy7rqb.css' />
       </head>
-      <body className='w-full max-w-7xl mx-auto'>
-        <Header />
+      <body className='w-full max-w-7xl mx-auto relative'>
+        <div className='sticky top-0 inset-0'>
+          <Header />
+        </div>
         <div className='mb-12'>{children}</div>
         <Footer />
       </body>

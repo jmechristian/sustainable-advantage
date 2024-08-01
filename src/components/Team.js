@@ -3,7 +3,7 @@ import React from 'react';
 const team = [
   {
     name: 'Dr. Andrew Hurley',
-    title: 'Associate Professor at Clemson University',
+    title: 'Professor at Clemson University',
     pic: 'https://packschool.s3.amazonaws.com/DrHurley.png',
     background: 'bg-[#d5673b]',
   },

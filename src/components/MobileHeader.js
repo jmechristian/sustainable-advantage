@@ -3,6 +3,8 @@ import { SiInstagram, SiLinkedin, SiTwitter, SiYoutube } from 'react-icons/si';
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
+import Image from 'next/image';
+import { MdMarkChatUnread } from 'react-icons/md';
 
 export const MobileHeader = ({ navigation }) => {
   const [active, setActive] = useState(false);
@@ -20,7 +22,30 @@ export const MobileHeader = ({ navigation }) => {
 const LinksOverlay = ({ nav }) => {
   return (
     <nav className='fixed right-4 top-4 z-40 h-[calc(100vh_-_32px)] w-[calc(100%_-_32px)] overflow-hidden'>
-      <LinksContainer nav={nav} />
+      <div className='flex flex-col justify-between h-full py-6'>
+        <div className='w-full max-w-[200px] pl-6'>
+          <Image
+            src={'https://packschool.s3.amazonaws.com/sa-logo-rev96.png'}
+            width={670}
+            height={263}
+            alt='Logo'
+          />
+        </div>
+        <LinksContainer nav={nav} />
+        <div className='p-5'>
+          <div className='bg-amber-200 rounded-lg p-3'>
+            <div className='flex items-center gap-4'>
+              <div>
+                <MdMarkChatUnread size={40} color='black' />
+              </div>
+              <div className='font-medium text-neutral-900 leading-tight'>
+                Click here to schedule a free consultation with the Clemson
+                Research Team
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };
@@ -54,7 +79,7 @@ const NavLink = ({ children, href, idx }) => {
       }}
       exit={{ opacity: 0, y: -8 }}
       href={href}
-      className='block text-5xl font-semibold text-white transition-colors hover:text-yellow-200 md:text-7xl'
+      className='block text-4xl font-semibold text-white transition-colors hover:text-yellow-200'
     >
       {children}
     </motion.a>
