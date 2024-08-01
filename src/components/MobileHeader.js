@@ -33,7 +33,12 @@ const LinksOverlay = ({ nav }) => {
         </div>
         <LinksContainer nav={nav} />
         <div className='p-5'>
-          <div className='bg-amber-200 rounded-lg p-3'>
+          <div
+            className='bg-amber-200 rounded-lg p-3'
+            onClick={() =>
+              window.open('https://forms.gle/orjUbg6TiD1DqFHJ6', '_blank')
+            }
+          >
             <div className='flex items-center gap-4'>
               <div>
                 <MdMarkChatUnread size={40} color='black' />
