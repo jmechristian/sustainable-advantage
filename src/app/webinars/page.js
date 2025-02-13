@@ -17,10 +17,10 @@ const webinars = [
     id: 2,
     title: 'Webinar 2',
     content:
-      'This webinar is currently being finalized, we will notify you when this webinar is posted.',
+      'Welcome back to the second installment of the Sustainable Advantage webinar series. In this webinar, we will go over the basics of identifying your materials and show you how to use some of the available resources.',
     screenshot:
-      'https://packschool.s3.amazonaws.com/webinar-placeholder-sm.webp',
-    live: false,
+      'https://packschool.s3.us-east-1.amazonaws.com/SA-web2-screen.png',
+    live: true,
   },
   {
     id: 3,
