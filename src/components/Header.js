@@ -11,7 +11,7 @@ const navigation = [
     link: '/',
   },
   {
-    name: 'About the Team',
+    name: 'About',
     link: '/about',
   },
   {
@@ -21,6 +21,10 @@ const navigation = [
   {
     name: 'Webinars',
     link: '/webinars',
+  },
+  {
+    name: ' Sustainable Product Index',
+    link: 'https://docs.google.com/spreadsheets/d/1mUCVKhEcsiUJc3qYC6UdaTQzSKzYJoK9gac36PYmVRk/edit?usp=sharing',
   },
   {
     name: 'Contact Us',
@@ -54,16 +58,16 @@ const Header = () => {
         </div>
       </motion.div>
       <motion.div
-        className='w-full bg-sustainable-green px-5 py-6 hidden lg:block'
+        className='w-full bg-sustainable-green py-6 hidden lg:block'
         initial={{ opacity: 0, y: '-100%' }}
         animate={{ opacity: 1, y: '0%' }}
         transition={{ duration: 0.5, ease: 'easeInOut' }}
       >
-        <div className='grid lg:grid-cols-5 divide-x-2 divide-white w-fit mx-auto'>
+        <div className='grid lg:flex justify-between divide-x-2 divide-white w-full mx-auto'>
           {navigation.map((item) => (
             <div
               key={item.link}
-              className='w-full flex justify-center font-semibold cursor-pointer text-white px-6 font-headline hover:text-yellow-300 transition-all ease-in'
+              className='w-full flex justify-center items-center font-semibold cursor-pointer text-white first:pl-0 last:pr-0 leading-tight px-6 text-sm text-center font-headline hover:text-yellow-300 transition-all ease-in'
               onClick={() => router.push(item.link)}
             >
               {item.name}
