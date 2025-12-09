@@ -26,10 +26,9 @@ const webinars = [
     id: 3,
     title: 'Webinar 3',
     content:
-      'This webinar is currently being finalized, we will notify you when this webinar is posted.',
-    screenshot:
-      'https://packschool.s3.amazonaws.com/webinar-placeholder-sm.webp',
-    live: false,
+      'Welcome to the final Webinar in our three part series! This guide will introduce you to the Sustainable Product index, and to the ins and outs of showing off your sustainable changes to consumers.',
+    screenshot: 'https://packschool.s3.us-east-1.amazonaws.com/web-3-hero.png',
+    live: true,
   },
 ];
 
